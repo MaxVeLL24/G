@@ -1,0 +1,120 @@
+// Страница корзини
+@media all and (max-width: 999px) {
+    .shopping-cart-content {
+        .shopping-cart-item {
+            .name-and-attributes {
+                width: 38%;
+            }
+            .price,
+            .quantity,
+            .cost,
+            .remove {
+                 font-size: 1rem;
+                width: 12%;
+            }
+            &.no-name .price {
+                margin-left: 52%;
+            }
+            &.item-heading {
+                font-size: 1rem;
+                
+                .price, 
+                .cost {
+                    font-size: 1rem;    
+                }
+            }
+            .image {
+                width: 14%;
+            }
+        }
+    }
+}
+@media all and (max-width: 680px) {
+    .shopping-cart-content {
+        .shopping-cart-item {
+            .name-and-attributes {
+                width: 30%;
+            }
+            .price,
+            .quantity,
+            .cost,
+            .remove { 
+                font-size: 1rem;
+                width: 14%;
+            }
+            &.no-name .price {
+                margin-left: 44%;
+            }
+            
+        }
+    }
+}
+@media all and (max-width: 600px) {
+    .shopping-cart-content {
+        .shopping-cart-item {
+            padding-left: 110px;
+            .image {
+                float: left;
+                margin-left: -110px;
+                width: 100px;
+            }
+            .name-and-attributes {
+                width: 100%;
+            }
+            .price,
+            .quantity,
+            .cost,
+            .remove {
+                box-sizing: border-box;
+                display: inline-block;
+                font-size: 1rem;
+                line-height: @default-lineheight;
+                vertical-align: top;    
+                margin-top: 10px;
+                width: 25%;
+                
+                .button{
+                    padding: 6px 7px;
+                }
+            }
+            .price {
+                margin-left: 0;
+            }
+            .price,
+            .quantity,
+            .cost {
+                &:before {
+                    content: attr(aria-label);
+                    display: block;
+                    font: 300 12px/1.75 HelveticaNeueCyr,sans-serif;
+                    margin-bottom: 5px;
+                }
+            }
+            .remove .button {
+                .button-block();
+            }
+            &.item-heading {
+                font-size: 1rem;
+                display: none;
+            }
+        }
+        .shopping-cart-item ~ .shopping-cart-item {
+            margin-top: 25px;
+        }
+    }
+}
+@media all and (max-width: 450px) {
+    .shopping-cart-content {
+        .shopping-cart-item {
+            .price,
+            .quantity,
+            .cost,
+            .remove {
+                width: 50%;
+            }
+            .cost {
+                margin-left: 0;
+            }
+        }
+    }
+}

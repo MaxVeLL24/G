@@ -1,0 +1,110 @@
+// Список брендов на главной
+.mpm-manufacturers {
+    background: #fff;
+    border-bottom: 1px solid #e3e3e3;
+    border-top: 1px solid #e3e3e3;
+    margin: 21px 0;
+    
+    // Алфавитный перечень и кнопки управления слайдером
+    .header-and-arrows {
+        // Алфавитный перечень
+        .list {
+            float: left;
+            font-size: 0;
+            line-height: 0;
+            padding-top: 11px;
+            user-select: none;
+            .label,
+            .letter-group {
+                display: inline-block;
+                vertical-align: top;
+            }
+            .label {
+                color: #424242;
+                text-transform: uppercase;
+            }
+            .label,
+            .letter,
+            .list {
+                font-size: 19px;
+                font-weight:500;
+                line-height: 29px;
+            }
+            .letter,
+            .list {
+                display: block;
+            }
+            .letter-group {
+
+                position: relative;
+                &.has-drop-down {
+                    cursor: pointer;
+                    .letter {
+                        cursor: pointer;
+                        color: #41a204;
+                        font-size: 19px;
+                        font-weight:300;
+                        text-decoration: underline;
+                    }
+                    &:hover {
+                        .letter {
+                            background: #41a204;
+                            color: #fff;
+                        }
+                        .list {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .letter {
+                cursor: default;
+                min-width: 13px;
+                padding-left: 5px;
+                padding-right: 5px;
+                text-align: center;
+            }
+            .list {
+                background: #41a204;
+                display: none;
+                left: 0;
+                margin-top: -1px;
+                min-width: 200px;
+                padding: 10px 13px;
+                position: absolute;
+                top: 100%;
+                width: auto;
+                z-index: 50;
+                a {
+                    color: #fff;
+                    display: block;
+                    line-height: 16px;
+                    font-size: 14px;
+                    font-weight:300;
+                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                a ~ a {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    
+    // Слайдер
+    .slider {
+        margin-bottom: 38px;
+        margin-top: 50px;
+        a {
+            font-size: 0;
+            line-height: 80px;
+            text-align: center;
+            img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}

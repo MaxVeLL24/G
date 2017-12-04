@@ -1,0 +1,78 @@
+// Страница просмотра истории заказов
+.account-history-table-wrapper {
+    overflow-x: auto;
+}
+.account-history-table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    th {
+        background-color: #98d472;
+        color: #fff;
+        text-align: left;
+    }
+    th, td {
+        padding: 5px;
+    }
+    thead tr {
+        border-bottom: 1px solid #4fab15;
+    }
+    tbody tr ~ tr {
+        border-top: 1px solid #e4e4e4;
+    }
+    tbody tr:nth-child(even) {
+        background-color: #e7f7dd;
+    }
+    tbody tr td:last-child {
+        text-align: right;
+    }
+    tbody tr:last-child {
+        border-bottom: 2px solid #a6b19f;
+    }
+}
+.account-grid {
+    padding-left: 240px;
+    .block-menu {
+        float: left;
+        margin-left: -240px;
+        width: 224px;
+    }
+    .block-content {
+        float: left;
+        width: 100%;
+    }
+}
+.account-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li ~ li {
+        border-top: 1px solid #e3e3e3;
+    }
+    a {
+        color: #939393;
+        display: block;
+        padding: 8px 18px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    li.active {
+        a {
+            border-left: 2px solid #41a204;
+            color: #000;
+            padding-left: 16px;
+        }
+    }
+}
+.account-info {
+    font-size: 14px;
+    list-style: none;
+    margin: 0;
+    padding: 8px 18px;
+    span {
+        color: #000;
+    }
+    strong {
+        color: #41a204;
+    }
+}

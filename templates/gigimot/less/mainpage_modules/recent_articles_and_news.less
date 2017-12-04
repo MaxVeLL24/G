@@ -1,0 +1,174 @@
+// Последние новости и статьи на главной
+.mpm-recent-articles-and-news {
+    // Заголовок
+    .column-title {
+        display: block;
+        font-size: 19/12rem;
+        line-height: @default-lineheight;
+        // margin-bottom: 20px;
+        font-weight:500;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    // Дата
+    .date {
+        background-position: left center;
+        background-repeat: no-repeat;
+        line-height: 15px;
+        padding-left: 23px;
+        font-family: Arial, Tahoma;
+    }
+    
+    // Статьи
+    padding-right: 482px;
+    .column-articles {
+        float: right;
+        margin-right: -482px;
+        width: 470px;
+    }
+    .block-articles {
+        background: #ffffff;
+        border: 3px solid #fbc723;
+        padding: 18px 18px 5px 26px;
+        .column-title {
+            color: #f2473f;
+        }
+        .item {
+            padding: 24px 0 23px 138px;
+        }
+        .item ~ .item {
+            border-top: 1px solid #fbc723;
+        }
+        .image {
+            display: block;
+            float: left;
+            font-size: 0;
+            line-height: 0;
+            margin-left: -138px;
+            max-height: 116px;
+            max-width: 116px;
+            overflow: hidden;
+            img {
+                display: block;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+        .text {
+            float: left;
+            width: 100%;
+        }
+        .title {
+            font-size: 13px;
+            line-height:1.25;
+            font-weight:600;
+            &, a {
+                color: #424242;
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .title {
+            margin-bottom: 5px;
+        }
+        .description {
+            line-height:1.25;
+            margin: 8px 0;
+        }
+        .date {
+            background-image: url('@{images-dir}icon-calendar-yellow.svg');
+            color: #b3a978;
+        }
+    }
+    
+    // Новости
+    .column-news {
+        float: left;
+        width: 100%;
+    }
+    .block-news {
+        background: #fff;
+        border: 1px solid #e3e3e3;
+        padding: 18px 20px 4px 22px;
+        .column-title {
+            color: #424242;
+        }
+        .columns {
+            padding-right: 314px;
+        }
+        .primary-item {
+            float: left;
+            padding: 23px 0;
+            width: 100%;
+             .title {
+                    line-height:1.25;
+                    font-weight:600;
+                    margin-bottom: 5px;
+                    }
+                .description {
+                    line-height:1.25;
+                    margin: 8px 0;
+                    }
+                .date {
+                    background-image: url('@{images-dir}icon-calendar-blue.svg');
+                    color: #4c92bf;
+                    font-family: Arial, Tahoma;
+                    }
+        }
+        .secondary-items {
+            float: right;
+            margin-right: -314px;
+            width: 286px;
+            .item {
+                padding: 23px 0;
+                 .title {
+                    line-height:1.25;
+                    font-weight:600;
+                    margin-bottom: 5px;
+                    }
+                .description {
+                    line-height:1.25;
+                    margin: 9px 0;
+                    }
+                .date {
+                    background-image: url('@{images-dir}icon-calendar-blue.svg');
+                    color: #4c92bf;
+                    font-family: Arial, Tahoma;
+                    }
+            }
+            .item ~ .item {
+                border-top: 1px solid #e8e8e8;
+            }
+        }
+        .image {
+            display: block;
+            font-size: 0;
+            line-height: 0;
+            margin-bottom: 18px;
+            overflow: hidden;
+            img {
+                display: block;
+                height: auto;
+                max-width: 100%;
+            }
+        }
+        .title {
+            font-size: 13px;
+            font-weight: normal;
+            &, a {
+                color: #424242;
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+       
+    }
+}

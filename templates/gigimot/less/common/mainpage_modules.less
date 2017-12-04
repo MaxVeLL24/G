@@ -1,0 +1,87 @@
+// Общие стили для модулей на главной странице
+
+// Модули со списком товаров на белом фоне в виде слайдера
+.mpm-bg-white-style {
+    background: #fff;
+    border: 1px solid #e3e3e3;  
+    margin-top: 18px;
+    .header-and-arrows {
+        padding-left: 16px;
+        padding-right: 7px;
+    }
+}
+
+// Заголовок и кнопки управления слайдером
+.header-and-arrows {
+    // Заголовок
+    .header {
+        color: #424242;
+        float: left;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 29px;
+        margin: 0;
+        padding: 11px 0 0;
+        text-transform: uppercase;
+    }
+
+    // Кнопки управления слайдером
+    .arrows {
+        float: right;
+        font-size: 0;
+        line-height: 0;
+        padding-top: 9px;
+        text-align: right;
+        a, button {
+            background-color: #41a204;
+            display: inline-block;
+            font: 300 13px/30px 'HelveticaNeueCyr', sans-serif;
+            min-height: 30px;
+            vertical-align: top;
+        }
+        a {
+            color: #fff;
+            cursor: pointer;
+            padding: 0 20px;
+            text-decoration: none;
+            user-select: none;
+        }
+        button {
+            background-image: url('@{images-dir}manufacturers-slider-arrows.gif');
+            background-repeat: no-repeat;
+            border: none;
+            cursor: pointer;
+            font-size: 0;
+            line-height: 0;
+            padding: 0;
+            margin: 0;
+            min-width: 30px;
+            &.slick-prev {
+                background-position: 0 0;
+            }
+            &.slick-next {
+                background-position: -30px 0;
+            }
+            &.slick-disabled {
+                background-color: #eaeaea;
+                cursor: not-allowed;
+                &.slick-prev {
+                    background-position: 0 -30px;
+                }
+                &.slick-next {
+                    background-position: -30px -30px;
+                }
+            }
+        }
+        span {
+            display: inline-block;
+            &:empty {
+                display: none;
+            }
+            &,
+            button ~ button {
+                margin-left: 6px;
+            }
+        }
+    }
+}

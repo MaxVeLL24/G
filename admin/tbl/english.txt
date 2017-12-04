@@ -1,0 +1,17 @@
+{
+	"sProcessing":   "Processing...",
+	"sLengthMenu":   "Show _MENU_ entries",
+	"sZeroRecords":  "Zero records found",
+	"sInfo":         "Showing _START_ to _END_ from _TOTAL_ records",
+	"sInfoEmpty":    "Showing 0 to 0 from 0 records",
+	"sInfoFiltered": "(filtered from _MAX_ total records)",
+	"sInfoPostFix":  "",
+	"sSearch":       "Search current entries:",
+	"sUrl":          "",
+	"oPaginate": {
+		"sFirst":    "Frist",
+		"sPrevious": "Previous",
+		"sNext":     "Next",
+		"sLast":     "Last"
+	}
+}

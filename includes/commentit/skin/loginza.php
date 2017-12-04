@@ -1,0 +1,1 @@
+<style>.loginza img {padding-left:5px;border:0;}</style><?php echo $langcommentit['skin_aut']; ?><br /><?php echo $panellozinza; ?>

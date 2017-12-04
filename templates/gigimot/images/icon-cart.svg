@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg"
+	x="0px"
+	y="0px"
+	width="16px"
+	height="15.5px"
+	viewBox="0 0 16 15.5"
+	enable-background="new 0 0 16 15.5"
+	>
+<circle fill="#FFFFFF" cx="6.5" cy="14" r="1.5"/>
+<circle fill="#FFFFFF" cx="11.5" cy="14" r="1.5"/>
+<polygon fill="#FFFFFF" points="12.767,10.938 4.628,10.938 1.628,1 0,1 0,0 2.372,0 5.372,9.938 12.108,9.938 14.671,4 16,4 16,5 
+	15.329,5 "/>
+<circle fill="#FFFFFF" cx="8" cy="1.5" r="1"/>
+<circle fill="#FFFFFF" cx="11" cy="1.5" r="1"/>
+<circle fill="#FFFFFF" cx="6" cy="4.5" r="1"/>
+<circle fill="#FFFFFF" cx="9" cy="4.5" r="1"/>
+<circle fill="#FFFFFF" cx="12" cy="4.5" r="1"/>
+<circle fill="#FFFFFF" cx="7" cy="7.5" r="1"/>
+<circle fill="#FFFFFF" cx="10" cy="7.5" r="1"/>
+</svg>

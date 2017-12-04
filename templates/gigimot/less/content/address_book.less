@@ -1,0 +1,21 @@
+// Адресная книга в кабинете покупателя
+.address-book-page {
+    .address-book-entry {
+        padding: 10px 130px 10px 10px;
+        .content {
+            float: left;
+            width: 100%;
+        }
+        .buttons {
+            float: right;
+            margin-right: -120px;
+            width: 100px;
+            .button ~ .button {
+                margin-top: 10px;
+            }
+        }
+        &:nth-child(even) {
+            background-color: #d2f2ff;
+        }
+    }
+}

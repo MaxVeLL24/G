@@ -1,0 +1,119 @@
+// Страница корзини
+.shopping-cart-content {
+    .shopping-cart-item {
+        font-size: 0;
+        line-height: 0;
+        .image,
+        .name-and-attributes,
+        .price,
+        .quantity,
+        .remove {
+            box-sizing: border-box;
+            display: inline-block;
+            font-size: 14px;
+            line-height: @default-lineheight;
+            vertical-align: top;
+        }
+        .price {
+            font-family:Arial, Tahoma;    
+        }
+        .cost{
+                font-size: 15px;
+                color:#41a204;
+                font-weight:600;
+                font-family:Arial, Tahoma;
+                box-sizing: border-box;
+                display: inline-block;
+                line-height: @default-lineheight;
+                vertical-align: top;
+            } 
+             
+        .image {
+            line-height: 100px;
+            text-align: center;
+            width: 17%;
+            a, img {
+                display: inline-block;
+                max-width: 100%;
+                vertical-align: middle;
+            }
+            a {
+                max-height: 150px;
+                overflow: hidden;
+            }
+            img {
+                height: auto;
+            }
+        }
+        .name-and-attributes {
+            width: 35%;
+        }
+        .price,
+        .quantity,
+        .cost,
+        .remove {
+            text-align: center;
+            width: 12%;
+        }
+        .name-and-attributes,
+        .price,
+        .quantity,
+        .cost,
+        .remove {
+            padding-left: 10px;
+        }
+        .quantity .button {
+            margin-top: 5px;
+        }
+        &.no-image .name-and-attributes {
+            margin-left: 14%;
+        }
+        &.no-name .price {
+            margin-left: 51%;
+        }
+        &.item-heading {
+                color:black;
+                font: 300 14px/1.75 HelveticaNeueCyr,sans-serif;
+            
+            .cost {
+                font-weight:300;
+                font: 300 12px/1.75 HelveticaNeueCyr,sans-serif;
+                color:black;
+                font-size: 14px;
+            }
+            .price  {
+                font-weight:300;
+                font: 300 12px/1.75 HelveticaNeueCyr,sans-serif;
+                color:black;
+                font-size: 14px;
+            }
+        }
+    }
+    .shopping-cart-item ~ .shopping-cart-item {
+        margin-top: 10px;
+    }
+}
+
+.buttons-block {
+    line-height: 35/12rem;
+    margin-bottom: 10/35em;
+    margin-top: 10/35em;
+}
+.order-totals {
+    font: 300 14px/1.5 HelveticaNeueCyr,sans-serif;
+    color:#424242;
+    .order-totals-right-block {
+        float:right;
+        background:#fff3b5;
+        padding:10px 20px;
+        margin:10px 0;
+    }
+    .value{
+        font-family:Arila, Tahoma;  
+    }
+}
+
+.order-totals-yellow {
+    background:#fff3b5;
+    padding:10px 18px;
+}

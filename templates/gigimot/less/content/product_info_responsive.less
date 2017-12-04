@@ -1,0 +1,230 @@
+// Страница информации о товаре
+@media all and (max-width: 1160px) {
+    .images-and-details {
+        padding-left: 441px;
+        padding-right: 0;
+        .payment-delivery-waranty {
+            box-sizing: border-box;
+            float: left;
+            width: 100%;
+        }
+        .images {
+            margin-left: -441px;
+            padding-left: 0;
+            .primary-image,
+            .secondary-images {
+                float: none;
+                width: 100%;
+            }
+            .secondary-images {
+                height: auto;
+                margin-left: 0;
+                margin-top: 12px;
+                padding-bottom: 15px;
+                white-space: nowrap;
+                a {
+                    display: inline-block;
+                }
+                a ~ a {
+                    margin-left: 12px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 800px) {
+    .images-and-details {
+        padding-left: 51%;
+        padding-right: 0;
+        .images {
+            margin-left: -104%;
+            padding-left: 0;
+            width: 98%;
+            .primary-image,
+            .secondary-images {
+                float: none;
+                width: 100%;
+            }
+            .secondary-images {
+                height: auto;
+                margin-left: 0;
+                margin-top: 12px;
+                padding-bottom: 15px;
+                white-space: nowrap;
+                text-align: center;
+                a {
+                    display: inline-block;
+                }
+                a ~ a {
+                    margin-left: 12px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 1160px) and (min-width: 1000px), all and (max-width: 700px) {
+    .images-and-details {
+    .payment-delivery-waranty {
+        box-sizing: border-box;
+        float: none;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 10px 5px;
+        justify-content: center;
+        dt, dd {
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+        dt {
+            width: 33%;
+            order: 0;
+            & ~ dt {
+                margin-top: 0;
+            }
+        }
+        dd {
+            width: 33%;
+            order: 1;
+            a {
+                float: none !important;
+            }
+        }
+    }
+}
+}
+@media all and (max-width: 700px) {
+    .images-and-details {
+        margin-bottom: 10px;
+        padding-left: 0;
+        .payment-delivery-waranty {
+            box-sizing: border-box;
+            float: none;
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            padding: 10px 5px;
+            justify-content: center;
+            margin-bottom: 25px;
+            dt,dd{
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
+            dt {
+                width: 33%;
+                order: 0;
+                &~dt{
+                    margin-top: 0;
+                }
+            }
+            dd {
+                width: 33%;
+                order: 1;
+                a{
+                    float: none !important;
+                }
+            }
+        }
+        .images {
+            float: none;
+            margin-bottom: 15px;
+            margin-left: 0;
+            width: auto;
+        }
+        .details {
+            float: none;
+            .price-block{
+                margin-top: 15px;
+            }
+        }
+    }
+
+    // Лайтбокс
+    .lightbox-popover {
+        padding: 0;
+        .lightbox-popup {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+        .popup-padding {
+            padding: 10px;
+        }
+        .popup-content {
+            .secondary-images {
+                a {
+                    height: 50px;
+                    line-height: 50px;
+                    width: 50px;
+                }
+            }
+        }
+        .arrow-prev,
+        .arrow-next {
+            height: 72px;
+            margin-top: -36px;
+            width: 38px;
+        }
+    }
+}
+@media all and (max-width: 500px) {
+    .images-and-details {
+        .payment-delivery-waranty {
+            display: none;
+        }
+    }
+
+    .tabs {
+        background-color: #f7f7f7;
+        border: 1px solid #e3e3e3;
+        margin-bottom: 10px;
+        .tab {
+            display: block;
+            &.active {
+                border: none;
+            }
+        }
+        .tab ~ .tab {
+            border-top: 1px solid #e3e3e3;
+        }
+    }
+}
+@media all and (max-width: 450px) {
+    // Лайтбокс
+    .lightbox-popover {
+        .popup-content {
+            .secondary-images {
+                a {
+                    height: 40px;
+                    line-height: 40px;
+                    margin: 2px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: 410px) {
+    .images-and-details .details .add-to-cart .button.button-buy-one-click {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+@media all and (max-width: 480px) {
+    .product-page {
+        .related-products .related-product {
+          .product,.plus{
+            width: 33.3%;
+            text-align: center;
+          }
+          .equals,.add-to-cart{
+            width: 100%;
+            text-align: center;
+            line-height: initial;
+          }
+        }
+    }
+}

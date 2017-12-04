@@ -1,0 +1,63 @@
+// Всплывающее окно
+.popover {
+    background: rgba(0, 0, 0, .2);
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    opacity: 0;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: opacity .3s linear;
+    z-index: 500;
+    .popup {
+        background: #fff;
+        box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, .05), -20px 20px 20px 0 rgba(0, 0, 0, .05);
+        margin-top: -50%;
+        transition: margin-top .3s linear;
+    }
+    .section-title {
+        margin-right: 30px;
+        position: relative;
+        z-index: 195;
+    }
+    .popup-padding {
+        padding: 20px;
+        position: relative;
+    }
+    .close-popup-button {
+        cursor: pointer;
+        display: block;
+        padding: 18px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 200;
+        &:after {
+            background: url('@{images-dir}close-cart-popup.svg') 0 0 no-repeat;
+            background-size:12px;
+            content: '.';
+            display: block;
+            font-size: 0;
+            height: 12px;
+            line-height: 0;
+            width: 12px;
+        }
+        &:hover:after {
+            background-position: 0 -12px;
+        }
+        &:active:after {
+            background-position: 0 -24px;
+        }
+    }
+    &.visible {
+        opacity: 1;
+        transition: opacity .3s linear;
+        .popup {
+            margin-top: 0;
+            transition: margin-top .3s ease-in-out;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+// Метки скидка, новинка, топ
+.product-label {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    line-height: 31px;
+    min-height: 31px;
+    min-width: 46px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    &:after {
+        border-bottom: 7px solid transparent;
+        border-right-style: solid;
+        border-right-width: 8px;
+        content: '.';
+        font-size: 0;
+        left: 50%;
+        line-height: 0;
+        margin-left: -4px;
+        position: absolute;
+        top: 100%;
+        width: 0;
+    }
+    &.label-new {
+        background-color: #5099d8;
+        &:after {
+            border-right-color: #5099d8;
+        }
+    }
+    &.label-top {
+        background-color: #d850ca;
+        &:after {
+            border-right-color: #d850ca;
+        }
+    }
+    &.label-discount {
+        background-color: #ee674d;
+        &:after {
+            border-right-color: #ee674d;
+        }
+    }
+}

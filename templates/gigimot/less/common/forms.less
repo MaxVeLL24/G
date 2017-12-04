@@ -1,0 +1,252 @@
+// Файл стилей форм
+
+// Кнопки
+.button {
+    background-color: #41a204;
+    border: none;
+    box-sizing: border-box;
+//    box-shadow: -2px  3px 3px 0 rgba(0, 0, 0, .2),
+//                -1px  1px 1px 0 rgba(0, 0, 0, .1),
+//                 1px -1px 1px 0 rgba(0, 0, 0, .1),
+//                -1px -1px 1px 0 rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+    font: 600 1rem/1.5 "HelveticaNeueCyr", sans-serif;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    &:hover {
+        background-color: #358404;
+    }
+    &:active {
+        box-shadow: -1px 1px 1px 0 rgba(0, 0, 0, .2);
+    }
+}
+a.button:hover {
+    text-decoration: none;
+}
+.button-block {
+    display: block;
+    width: 100%;
+}
+.button-blue {
+    background-color: #4c92bf;
+    &:hover {
+        background-color: #3d84b1;
+    }
+}
+.button-red {
+    background-color: #D42A2A;
+    &:hover {
+        background-color: #B81111;
+    }
+}
+.button-grey {
+    background-color: #C3C3C3;
+    &:hover {
+        background-color: #a7a7a7;
+    }
+}
+.button:disabled,
+.button-disabled {
+    cursor: not-allowed;
+    &,
+    &:hover {
+        background-color: #C3C3C3;
+    }
+    &:active {
+        box-shadow: -2px  3px 3px 0 rgba(0, 0, 0, .2),
+                    -1px  1px 1px 0 rgba(0, 0, 0, .1),
+                     1px -1px 1px 0 rgba(0, 0, 0, .1),
+                    -1px -1px 1px 0 rgba(0, 0, 0, .1);
+    }
+}
+.button-big {
+    font-size: 15/12rem;
+    line-height: @default-lineheight;
+    padding: 5px 13px;
+}
+.button-small {
+    font-size: 10/12rem;
+    line-height: @default-lineheight;
+    padding: 4px 6px;
+    cursor:pointer;
+}
+.unactive {
+    color:white;
+    background-color: #4c92bf;
+}
+// Формы
+.form-group {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    .control-label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    &.has-error {
+        &,
+        .form-control {
+            color: #ff0000;
+        }
+        .form-control {
+            border-color: #ff0000;
+        }
+    }
+    &.has-success {
+        &,
+        .form-control {
+            color: #64b520;
+        }
+        .form-control {
+            border-color: #64b520;
+        }
+    }
+    &.has-warning {
+        &,
+        .form-control {
+            color: #f9be10;
+        }
+        .form-control {
+            border-color: #f9be10;
+        }
+    }
+}
+.form-control {
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    color: #939393;
+    display: block;
+    font-size: 13/12rem;
+    height: 30px;
+    line-height: @default-lineheight;
+    margin: 0;
+    width: 100%;
+    &.inline {
+        display: inline-block;
+        width: auto;
+    }
+    &.disabled,
+    &:disabled {
+        border-color: #C3C3C3;
+    }
+}
+input[type="text"].form-control,
+input[type="email"].form-control,
+input[type="password"].form-control,
+input[type="number"].form-control {
+    padding: 0 10px;
+}
+textarea.form-control {
+    padding: 5px 10px;
+}
+.middle-width-form {
+    margin: auto;
+    max-width: 400px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+// Кастомный селект
+.custom-select {
+    appearance: none;
+    background: #fff url('@{images-dir}select-arrow.gif') right center no-repeat;
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    color: #7d7d7d;
+    display: inline-block;
+    cursor: pointer;
+    font: 300 normal 13px/@default-lineheight 'HelveticaNeueCyr', sans-serif;
+    height: 30px;
+    margin: 0;
+    padding: 0 30px 0 10px;
+}
+
+// Кастомные переключатели
+.custom-radiobox {
+    cursor: pointer;
+    display: inline-block;
+    input {
+        display: none;
+    }
+    label {
+        background: #F2F3F8;
+        border: 1px solid #e4e4e4;
+        border-radius: 8px;
+        box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, .1) inset;
+        display: block;
+        height: 16px;
+        position: relative;
+        width: 16px;
+        &:after {
+            background: #42980b;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px rgba(255, 255, 255, .3) inset;
+            content: '.';
+            display: none;
+            font-size: 0;
+            height: 10px;
+            left: 3px;
+            line-height: 0;
+            position: absolute;
+            top: 3px;
+            width: 10px;
+        }
+        &:active:after {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, .1) inset;
+            display: block;
+        }
+    }
+    input:checked ~ label:after {
+        display: block;
+    }
+}
+.radiobox-group {
+    line-height: 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    .custom-radiobox {
+        margin-right: 10px;
+    }
+    .custom-radiobox,
+    label {
+        vertical-align: middle;
+    }
+}
+
+// Кастомные чекбоксы
+.custom-checkbox {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    input {
+        display: none;
+    }
+    label {
+        background-color: #FFFFF;
+        background-position: 1px 1px;
+        background-repeat: no-repeat;
+        border: 1px solid #dcdcdc;
+        cursor: pointer;
+        display: inline-block;
+        height: 12px;
+        margin-right: 6px;
+        width: 12px;
+    }
+    input:checked ~ label {
+        background-color: #41a204;
+        background-image: url('@{images-dir}checkbox-checked.svg');
+        border-color: #41a204;
+    }
+}

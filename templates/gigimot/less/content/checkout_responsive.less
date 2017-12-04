@@ -1,0 +1,30 @@
+// Страница оформления закза
+@media all and (max-width: 855px) {
+    .checkout {
+        padding-right: 0;
+        // Левая колонка для авторизации и данных о покупателе
+        .checkout-left {
+            float: none;
+        }
+        // Правая колонка со списком покупок и общей стоимостью
+        .checkout-right {
+            float: none;
+            margin-right: 0;
+            width: 100%;
+            .column-padding {
+                padding-left: 0;
+            }
+        }
+    }
+}
+@media all and (max-width: 450px) {
+    .checkout {
+        .tabs {
+            .tab-item {
+                border-radius: 0;
+                display: block;
+                margin-right: 0;
+            }
+        }
+    }
+}

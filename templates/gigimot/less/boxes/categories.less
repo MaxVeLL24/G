@@ -1,0 +1,49 @@
+// Список категорий в боковой колонке
+.box-categories {
+    font-size: 13/12rem;
+    line-height: @default-lineheight;
+    margin-bottom: 12px;
+    padding: 18px 20px;
+    &, a {
+        color: #424242;
+    }
+    a {
+        background: url('@{images-dir}categories-item-arrow.gif') 0 4px no-repeat;
+        display: block;
+        padding-left: 10px;
+        font-weight:300;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+        &.active {
+            font-weight:600;
+            background-image: url('@{images-dir}categories-item-arrow-active.gif');
+        }
+    }
+    ul {
+        display: block;
+        line-height: 16/13em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        margin: 10px 0 0;
+    }
+    ul ul {
+        margin-left: 15px;
+    }
+    // Заголовок
+    .title {
+        line-height: 1;
+        margin-bottom: 15px;
+        font-size:15px;
+        font-weight:500;
+        text-transform: uppercase;
+    }
+    // Активные пункты меню
+    .active {
+        color: #41a204;
+    }
+}

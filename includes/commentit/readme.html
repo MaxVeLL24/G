@@ -1,0 +1,312 @@
+<html>
+<head>
+<title>CommentIt 5.2.5 Ajax - Руководство пользователя</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<style>p {line-height:100%; margin-top:0; margin-bottom:0;}</style>
+<body>
+
+<h1 align="center">CommentIt 5.2.5&nbsp;Ajax - Руководство пользователя</h1>
+<hr>
+<p><b>Автор:</b> LEOnidUKG (Кулиненко Леонид)</p>
+<p><b>URL:</b> <a href="http://www.yourcommentit.ru/">http://www.yourcommentit.ru/</a></p>
+<p><b>Почта:</b> <a href="mailto:buy@yourcommentit.ru">buy@yourcommentit.ru</a></p>
+<p><b>ICQ:</b> 220923756</p>
+<p><b>Jabber:</b> leonidukg@qip.ru</p>
+<br>
+<h2><font color="red">Внимание:</font></h2>
+<p>1. Перепродажа скрипта 3-м лицам запрещена.</p>
+<p>2. Официально скрипт продаётся на сайте <a href="http://yourcommentit.ru/" target="_blank">http://yourcommentit.ru/</a> и у официальных дилеров, список которых предоставлен на странице <a href="http://yourcommentit.ru/buy/" target="_blank">http://yourcommentit.ru/buy</a>. Если Вы покупаете скрипт в другом месте (пароль от архива), автор за работоспособность ответственности не несёт.</p>
+<p>3. Техническая поддержка предоставляется только клиентам, купившим скрипт на сайте <a href="http://yourcommentit.ru/ " target="_blank">http://yourcommentit.ru/</a> и официальных дилеров</p>
+<p>4. Если клиент самостоятельно изменил программный код файлов .php (кроме config.php) и .js, автор скрипта ответственности за правильную работоспособность скрипта не несёт.</p>
+<p>5. Бесплатное обновление предоставляется только клиентам из п.3</p>
+<br>
+<h2>Содержание:<a name="Start"></a></h2>
+<ul type="square">
+    <li><a href="#System">Системные требования</a></li>
+    <li><a href="#Install">Установка</a></li>
+    <li><a href="#Adm">Администрирование</a></li>
+    <li><a href="#Skin">Шаблоны</a></li>
+    <li><a href="#Update">Обновление</a></li>
+    <li><a href="#FunctionFAQ">Ответы от администратора</a></li>
+    <li><a href="#RSS">Поддержка RSS</a></li>
+    <li><a href="#Last">Вывод последних комментариев</a></li>
+    <li><a href="#Li">Счётчик количества комментариев на&nbsp;определенной странице</a></li>
+    <li><a href="#FAQ">Вопросы и ответы по работе скрипта</a></li>
+    <li><a href="#CMS">Примеры интеграций в CMS</a></li>
+</ul>
+<br>
+<h2>Системные требования:<a name="System"></a> [<a href="#Start">Содержание</a>]</h2>
+<p>1. PHP 4/5</p>
+<p>2. MySQL 4/5 (MSSQL)</p>
+<br>
+<h2>Установка:<a name="Install"></a> [<a href="readme.html#Start">Содержание</a>] </h2>
+<p>1. Распакуйте файлы в любую папку Вашего сайта. (Обязательно в папку)</p>
+<p>2. Откройте config.php и пропишите Ваши данные для подключения MySQL (MSSQL) и другие настройки по Вашему вкусу.</p>
+<p>3. Запустите setup.php, данный файл создаст таблицу куда будут записываться данные.</p>
+<p>4. Удалить файл setup.php</p>
+<p>5. Вставить след. код на нужные страницы:</p>
+<br>
+<p>Код для PHP: &lt;?php require_once ($_SERVER['DOCUMENT_ROOT'].'/Путь_до_папки_со_скриптом/comment.php');?&gt;</p>
+<br>
+<p>Код для SSI: </p>
+<p>&lt;!--#include file=&quot;/Путь_до_папки_со_скриптом/comment.php&quot;--&gt;</p>
+<p>или</p>
+<p>&nbsp;&lt;!--#include virtual=&quot;/Путь_до_папки_со_скриптом/comment.php&quot;--&gt;</p>
+<p>&nbsp;</p>
+<br>
+<p><b><font color="red">Внимание:</font></b> Путь_до_папки_со_скриптом - должен совпадать с переменной $wwp из config.php</p>
+<br>
+<p><b>Например, если Ваш скрипт находится в папке &quot;commentit&quot; в корневой папке сайта то строка&nbsp;для вставки будет выглядить так:</b></p>
+<p>&nbsp;&lt;?php require_once ($_SERVER['DOCUMENT_ROOT'].'/commentit/comment.php');?&gt;</p>
+<br>
+<h2>Администрирование: <a name="Adm"></a> [<a href="readme.html#Start">Содержание</a>] </h2>
+<p>Для входа в панель администрирования используйте файл adm.php</p>
+<br>
+<h2>Шаблоны:<a name="Skin"></a> [<a href="readme.html#Start">Содержание</a>] </h2>
+<p>Вы можете придать любой вид комментариям, для этого Вам нужно отредактировать файлы лежащие&nbsp;в папке skin.</p>
+<p>Состав шаблонов:</p>
+<p>addcom.html - Форма добавления комментариев</p>
+<p>viewcom.html - Вид комментариев при выводе</p>
+<p>adminviewcom.html - Вид комментариев администратора&nbsp;при выводе</p>
+<p>capt.html - Вид каптчи</p>
+<p>replay.html - Надписи ответа на комментарии в многоуровневом режиме</p>
+<p>last.html - Вид последних отставленных комментариев</p>
+<p>rating.html - Рейтинг комментариев</p>
+<p>loginza.html - Авторизация пользователей</p>
+<br>
+<h2>Обновление:<a name="Update"></a> [<a href="readme.html#Start">Содержание</a>]</h2>
+<p>С версии 3.x.x&nbsp;до 5</p>
+<ul>
+    <li>Заменить все&nbsp;файлы</li>
+    <li>Настроить config.php</li>
+    <li>Запустить update5.php  </li>
+</ul>
+<ul>
+    <ul>
+        <p>&nbsp;</p>
+    </ul>
+</ul>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+С версии до 5.2.2 до 5.2.4<ul>
+    <li>Заменить файлы:</li>
+    <ul>
+        <li>func.php</li>
+        <li>adm.php</li>
+    </ul>
+    <ul>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+&nbsp;
+    </ul>
+</ul>
+<p>С версии до 5.2.4 до 5.2.5</p>
+<ul>
+    <li>Заменить файлы:</li>
+    <ul>
+        <li>func.php</li>
+        <li>adm.php</li>
+    </ul>
+    <ul>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+&nbsp;
+    </ul>
+</ul>
+<p>&nbsp;</p>
+<h2>Ответы от администратора<a name="FunctionFAQ"></a> [<a href="readme.html#Start">Содержание</a>]    </h2>
+<p>Чтобы написать сообщения от администратора, вне админинки,&nbsp;Вам нужно вместо имени ввести пароль от админки, после удачной проверки пароля Ваше сообщения будет размещено с использованием имени указанным в config.php. Вводить каптчу администратору не нужно.</p>
+<p>Изменить стиль сообщения от администратора можно в файле:skin/adminviewcom.html</p>
+<h2><br>
+Поддержка RSS <a name="RSS"></a> [<a href="readme.html#Start">Содержание</a>]    </h2>
+<p>Для подключения на канал всех комментариев нужно просто вызвать файл rss.php, без параметров.</p>
+<br>
+<h2>Вывод последних комментариев<a name="Last"></a> [<a href="readme.html#Start">Содержание</a>] </h2>
+<p>Для того, чтобы вывести последние комментарии нужно, вставить след.код на нужные Вам страницы:</p>
+<p>&lt;?php require_once ($_SERVER['DOCUMENT_ROOT'].'/Путь_до_папки_со_скриптом/last.php');?&gt;</p>
+<br>
+<p>вывести последние, уникальные комментарии &nbsp;(как на форумах) используйте код::</p>
+<p>&lt;?php require_once ($_SERVER['DOCUMENT_ROOT'].'/Путь_до_папки_со_скриптом/last2.php');?&gt;</p>
+<br>
+<h2>Счётчик количества комментариев на&nbsp;определенной&nbsp;странице<a name="Li"></a> [<a href="readme.html#Start">Содержание</a>] </h2>
+<p>В выбранном Вами месте вставляете следующий код:</p>
+<p>&lt;?php include_once ($_SERVER['DOCUMENT_ROOT'].&quot;/Путь_до_папки_со_скриптом/countcomment.php&quot;);echo countcomment('урл_страницы'); ?&gt;</p>
+<p>Вместо урл_страницы, вставляете адрес у какой страницы считать количество комментариев.</p>
+<p>Так уже урл_страницы, всегда начинается с /</p>
+<p><b>Пример использования:</b></p>
+<p>&lt;html&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;?php include_once ($_SERVER['DOCUMENT_ROOT'].&quot;/Путь_до_папки_со_скриптом/countcomment.php&quot;); ?&gt;</p>
+<p>Первая статья!</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Комментариев: &lt;?php echo countcomment('/stat1.html'); ?&gt;</p>
+<p>Вторая статья!</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Комментариев: &lt;?php echo countcomment('/stat2.html'); ?&gt;</p>
+<p>&lt;/body&gt;</p>
+<p>&lt;/html&gt;</p>
+<br>
+<h2>Примеры интеграций в CMS<a name="CMS"></a> [<a href="readme.html#Start">Содержание</a>]  </h2>
+<p><b>CMS на шаблонах Smarty </b></p>
+<br>
+<p>1. Открыть файл comment.php</p>
+<br>
+<p>2. Найти строчку:</p>
+<p>&lt;input type=&quot;hidden&quot; name=&quot;url&quot; id=&quot;urls&quot; value=&quot;&lt;?echo $specurl;?&gt;&quot;&gt;</p>
+<br>
+<p>Заменить на:</p>
+<p>&lt;input type=&quot;hidden&quot; name=&quot;url&quot; id=&quot;urls&quot; value=&quot;&lt;?echo $_GET ['url'];?&gt;&quot;&gt;</p>
+<br>
+<p>3. В файле index.php Вашего сайта прописывается следующий код:</p>
+<br>
+<p>$comments_patch = 'http://ВАШ_Сайт.ру/название_папки_где_лежит_скрипт/comment.php?url='.$_SERVER ['REQUEST_URI'];</p>
+<br>
+<p>$comments = file_get_contents ( $comments_patch );</p>
+<br>
+<p>$smarty-&gt;assign ( 'comments', $comments );</p>
+<br>
+<p>4. Для вставки скипта в шаблоны Вашего сайта используйте код:</p>
+<br>
+<p>{$comments}</p>
+<p>P.S. Если комментарии отображаются только после добавления новых, то нужно открыть файл func.php.</p>
+<p>Найти строчку: </p>
+<br>
+<p>{$url=$specurl;}</p>
+<p>и заменить её на: </p>
+<p>{$url=$_GET ['url'];}</p>
+<hr>
+<p><b>CMS на шаблонах Smarty2 </b></p>
+<br>
+<p>1. Открыть файл comment.php</p>
+<br>
+<p>2. Найти строчку:</p>
+<p>&lt;input type=&quot;hidden&quot; name=&quot;url&quot; id=&quot;urls&quot; value=&quot;&lt;echo $specurl;?&gt;&quot;&gt;</p>
+<br>
+<p>Заменить на:</p>
+<p>&lt;input type=&quot;hidden&quot; name=&quot;url&quot; id=&quot;urls&quot; value=&quot;&lt;?echo $_GET ['url'];?&gt;&quot;&gt;</p>
+<br>
+<p><b>3. </b>В файле шаблона .tpl Вашего сайта прописывается следующий код:</p>
+<p>{php}</p>
+<p>$comments_patch = 'http://Адрес_Вашего_Сайта/название_папки_где_лежит_скрипт/comment.php?url='.$_SERVER ['REQUEST_URI'];</p>
+<p>$comments = file_get_contents ( $comments_patch );</p>
+<p>$this-&gt;assign(&quot;comments&quot;, $comments);</p>
+<p>$comments = $this-&gt;get_template_vars('comments');</p>
+<p>{/php}</p>
+<p>{$comments}</p>
+<br>
+<p>P.S. Если комментарии отображаются только после добавления новых, то нужно открыть файл func.php.</p>
+<p>Найти строчку: </p>
+<br>
+<p>{$url=$specurl;}</p>
+<p>и заменить её на: </p>
+<p>{$url=$_GET ['url'];}</p>
+<hr>
+<p><b>CMS DLE </b></p>
+<br>
+<p>1. Устанавить CommentIt &nbsp;</p>
+<br>
+<p>2. Открываем файл index.php (находится в корневой папке вашего сайта)</p>
+<br>
+<p>3. Найти строчку:</p>
+<br>
+<p>echo $tpl-&gt;result['main'];</p>
+<br>
+<p>Заменить на:</p>
+<br>
+<p>eval (' ?' . '&gt;' . $tpl-&gt;result['main'] . '&lt;' . '?php ');</p>
+<br>
+<p>4. Открываем файл addcomments.tpl (находится в папке с шаблоном вашего сайта) стираем все содержимое и вставляем</p>
+<br>
+<p>&lt;?php require_once ($_SERVER['DOCUMENT_ROOT'].'/Путь_до_папки_со_скриптом/comment.php');?&gt;</p>
+<br>
+<h2>Вопросы и ответы по работе скрипта:<a name="FAQ"></a> [<a href="readme.html#Start">Содержание</a>]  </h2>
+<br>
+<p><b>Вопрос:</b> Если используется несколько сайтов на одной БД как быть?</p>
+<p><b>Ответ:</b> Загружаете скрипт на другой сайт в config.php меняете переменную $table и проводите заново установочную процедуру.</p>
+<hr>
+<p><b>Вопрос:</b> &nbsp;У меня при первом комментарии всегда выпадает ошибка о не правильно введённой каптчи, хотя введена правильно. Почему?</p>
+<p><b>Ответ: </b>Из-за вставки скрипта в середину сайта, PHP код не может правильно обработать скрипт. Решается данная проблема с помощью вставки следующего кода в самое начала Вашего сайта, не скрипта, а именно сайта:</p>
+<p>&lt;?php</p>
+<p>ob_start();</p>
+<p>Это стандартная функция включения буферизации перед выводом.</p>
+<hr>
+<p><b>Вопрос: </b>Комментарии видны только после добавления нового. Почему?</p>
+<p><b>Ответ:</b> Значит таблица создалась в неправильной кодировке. Переведите таблицу с комментариями в кодировку cp1251_general_ci или utf8_unicode_ci в зависимости от используемой кодировки на сайте.</p>
+<hr>
+<p><b>Вопрос:</b> На локальной машине всё работает отлично, а на хостинге при обращение к папке со скриптом, появляется 500 ошибка. Как решить проблему?</p>
+<p><b>Ответ:</b> Удалите файл .htaccess в папке со скриптом.</p>
+<hr>
+<p><b>Вопрос:</b> У меня сайт на чистом HTML, как мне вставить скрипт?</p>
+<p><b>Ответ:</b> В корневом файле .htaccess (если его нет, то нужно создать в корневой папке сайта) добавить строчку:</p>
+<p>AddType application/x-httpd-php .php .htm .html</p>
+<p>или</p>
+<p>AddHandler application/x-httpd-php .php .htm .html .phtml</p>
+<p>или</p>
+<p>AddHandler x-httpd-php .php .htm .html .phtml</p>
+<p>или</p>
+<p>AddType application/x-httpd-php5 .php .htm .html</p>
+<p>или</p>
+<p>AddHandler application/x-httpd-php5 .php .htm .html .phtml</p>
+<p>или</p>
+<p>AddHandler x-httpd-php5 .php .htm .html .phtml</p>
+<p>или</p>
+<p>AddHandler cgi-script .html .htm</p>
+<p>После этого все html страницы будут обрабатываться как php файлы.</p>
+<b>Если ни одна строчка не сработала, узнайте у Вашего хостера как запустить php вставки в html файлах.</b>
+<hr>
+<p><b>Вопрос: </b>После обновления скрипта&nbsp;комментарии остаются?</p>
+<p><b>Ответ:</b> Да.</p>
+<hr>
+<p><b>Вопрос: </b>А можно установить скрипт в уже существующую БД?</p>
+<p><b>Ответ: </b>Да, можно т.к.&nbsp;скрипт использует всего одну таблицу.</p>
+<hr>
+<p><b>Вопрос: </b>Можно удалить надпись &quot;CommentIt 5&nbsp;Ajax&quot;? </p>
+<p><b>Ответ: </b>Да, можно. Находится она в файле &quot;/skin/addcom.html&quot;</p>
+<hr>
+<p><b>Вопрос: </b>Можно ли редактировать файлы скрипта?</p>
+<p><b>Ответ: </b>Да, можно, но за работоспособность разработчик уже не несёт ответственности.</p>
+<hr>
+<p><b>Вопрос: </b>Как использовать аватарки?</p>
+<p><b>Ответ: </b></p>
+<ol>
+    <li>Скачать архив с аватарками (<a href="http://yourcommentit.ru/avatars100.rar" target="_blank">100х100</a>, <a href="http://yourcommentit.ru/avatars128.rar" target="_blank">128х128</a>) или использовать свои</li>
+    <li>Переместить все аватарки в папку &quot;/avatars&quot;</li>
+    <li>В настройках включить отображение аватаров</li>
+    <li>Теперь в /skin/viewcom.html и /skin/adminviewcom.html можно использовать {$scravatar} для вставки аватара в нужное место дизайна</li>
+</ol>
+<hr>
+<p><b>Вопрос: </b>Как заставить скрипт не отображаться на определённых страницах? </p>
+<p><b>Ответ: </b>Внесите на эти страницы код, до вызова кода комментариев: &lt;?php $nocommentit=1; ?&gt; </p>
+<hr>
+<p><b>Вопрос: </b>Как активировать режим &quot;только чтение&quot; на определённых страницах сайта? </p>
+<p><b>Ответ: </b>Внесите на эти страницы код, до вызова кода комментариев: &lt;?php $staticcommentit=1; ?&gt; </p>
+<hr>
+<p><b>Вопрос: </b>Как активировать&nbsp;сервис авторизации Логинза? </p>
+<p><b>Ответ: </b>Нужно зарегистрироваться на сайте: <a href="https://loginza.ru/reg">https://loginza.ru/reg</a> и добавить домен вашего сайта в раздел&nbsp;&quot;Мой виджет Loginza&quot;. Безопасную авторизацию включать не нужно.</p>
+<hr>
+<p><b>Вопрос: </b>Если имя ввыводится ироглифами, что делать?</p>
+<p><b>Ответ: </b>Из-за вставки скрипта в середину сайта, PHP код не может правильно обработать скрипт. Решается данная проблема с помощью вставки следующего кода в самое начала Вашего сайта, не скрипта, а именно сайта:</p>
+<p>&lt;?php ob_start(); ?&gt;</p>
+<p>Это стандартная функция включения буферизации перед выводом.</p>
+</p>
+<hr>
+<p><br>
+<br>
+<br>
+</p>
+<p align="center">&copy; <b>2008-2011 &laquo;<a href="http://yourcommentit.ru/buy/" target="_blank">CommentIt 5 Ajax</a></b>&raquo;</p>
+</body>
+
+</html>

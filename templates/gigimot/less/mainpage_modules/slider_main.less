@@ -1,0 +1,96 @@
+// Сладер изображений на главной странице
+.mpm-slider-main {
+    background: #41a204 url('@{images-dir}background-toys.png') left top repeat;
+    .padding-box {
+        padding: 18px 247px 21px;
+    }
+    .special-offer-left,
+    .special-offer-right {
+        display: block;
+        font-size: 0;
+        line-height: 0;
+        max-width: 230px;
+        overflow: hidden;
+        text-decoration: none;
+    }
+    .special-offer-left {
+        float: left;
+        margin-left: -247px;
+    }
+    .special-offer-right {
+        float: right;
+        margin-right: -247px;
+    }
+    .slides {
+        float: left;
+        width: 100%;
+        //display: flex;
+        //justify-content: space-around;
+        a {
+            text-decoration: none;
+            img{
+                display: none;
+            }
+        }
+        a:nth-child(1){
+            img:nth-child(1){
+                display: block;
+            }
+        }
+        .slick-dots {
+            bottom: 0;
+            font-size: 0;
+            left: 0;
+            line-height: 17px;
+            list-style: none;
+            margin: 0;
+            padding: 0 0 14px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            li {
+                display: inline-block;
+                line-height: 17px;
+                vertical-align: middle;
+                button {
+                    background: transparent;
+                    border: 2px solid #fff;
+                    border-radius: 7px;
+                    cursor: pointer;
+                    display: block;
+                    font-size: 0;
+                    height: 14px;
+                    line-height: 0;
+                    margin: 0;
+                    padding: 0;
+                    width: 14px;
+                }
+                &.slick-active {
+                    button {
+                        background-color: #41a204;
+                        border-radius: 8px;
+                        height: 17px;
+                        width: 17px;
+                    }
+                }
+            }
+            li ~ li {
+                margin-left: 5px;
+            }
+        }
+    }
+    .slick-slide img {
+        height: auto;
+        width: 100%;
+    }
+    div.slick-list{
+        div.slick-track{
+            a{
+                img{
+                    display: block;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+{
+    "name": "eshopmakers/gigimot",
+    "type": "project",
+    "description": "Сайт gigimot",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Eshopmakers",
+            "email": "admin@eshopmakers.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpexcel": "1.8.*",
+        "phpmailer/phpmailer": "^5.2"
+    },
+    "config": {
+        "vendor-dir": "includes/vendor"
+    }
+}

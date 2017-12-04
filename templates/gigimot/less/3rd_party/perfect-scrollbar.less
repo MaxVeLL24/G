@@ -1,0 +1,72 @@
+/* perfect-scrollbar v0.6.14 */
+.ps-container {
+    -ms-touch-action: auto;
+    touch-action: auto;
+    overflow: hidden !important;
+    -ms-overflow-style: none;
+}
+@supports (-ms-overflow-style: none) {
+    .ps-container {
+        overflow: auto !important;
+    }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .ps-container {
+        overflow: auto !important;
+    }
+}
+.ps-container.ps-active-x > .ps-scrollbar-x-rail,
+.ps-container.ps-active-y > .ps-scrollbar-y-rail {
+    display: block;
+    background-color: transparent;
+}
+.ps-container > .ps-scrollbar-x-rail {
+    background: #d5d5d5;
+    border-radius: 2px;
+    bottom: 0;
+    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .1) inset;
+    display: none;
+    height: 5px;
+    position: absolute;
+}
+.ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4da813+0,439b0d+100 */
+    background: #4da813; /* Old browsers */
+    background: -moz-linear-gradient(top,  #4da813 0%, #439b0d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #4da813 0%,#439b0d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #4da813 0%,#439b0d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4da813', endColorstr='#439b0d',GradientType=0 ); /* IE6-9 */
+    border-radius: 2px;
+    bottom: 0;
+    box-shadow:  3px  3px 3px 0 rgba(0, 0, 0, .05),
+                -3px  3px 3px 0 rgba(0, 0, 0, .05),
+                 3px -3px 3px 0 rgba(0, 0, 0, .05),
+                -3px -3px 3px 0 rgba(0, 0, 0, .05);
+    height: 100%;
+    position: absolute;
+}
+.ps-container > .ps-scrollbar-y-rail {
+    background: #d5d5d5;
+    border-radius: 2px;
+    box-shadow: 3px 1px 3px 0 rgba(0, 0, 0, .1) inset;
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 5px;
+}
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4da813+0,439b0d+100 */
+    background: #4da813; /* Old browsers */
+    background: -moz-linear-gradient(left,  #4da813 0%, #439b0d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #4da813 0%,#439b0d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #4da813 0%,#439b0d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4da813', endColorstr='#439b0d',GradientType=1 ); /* IE6-9 */
+    border-radius: 2px;
+    box-shadow:  3px  3px 3px 0 rgba(0, 0, 0, .05),
+                -3px  3px 3px 0 rgba(0, 0, 0, .05),
+                 3px -3px 3px 0 rgba(0, 0, 0, .05),
+                -3px -3px 3px 0 rgba(0, 0, 0, .05);
+    position: absolute;
+    right: 0;
+    width: 100%;
+}

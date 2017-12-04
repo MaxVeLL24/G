@@ -1,0 +1,49 @@
+// Ограничитель по ширине
+@media all and (max-width: 1220px) {
+    .main-width {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+@media all and (max-width: 480px) {
+    *,
+    *::before,
+    *::after {
+        cursor: pointer;
+    }
+}
+// Список товаров
+@import (less) './common/products_listing_responsive.less';
+
+// Последние новости и статьи на главной
+@import (less) './mainpage_modules/recent_articles_and_news_responsive.less';
+
+// Сладер изображений на главной странице
+@import (less) './mainpage_modules/slider_main_responsive.less';
+
+// Шапка сайта
+@import (less) './page_parts/header_responsive.less';
+
+// Подвал сайта
+@import (less) './page_parts/footer_responsive.less';
+
+// Центральная часть для боковых колонок и контента
+@import (less) './page_parts/content_responsive.less';
+
+// Страница корзины
+@import (less) './content/shopping_cart_responsive.less';
+
+// Страница категории
+@import (less) './content/index_products_responsive.less';
+
+// Страница оформления заказ
+@import (less) './content/checkout_responsive.less';
+
+// Страница авторизации
+@import (less) './content/login_responsive.less';
+
+// Вкладки в кабинете
+@import (less) './content/account_responsive.less';
+
+// Страница производителей
+@import (less) './content/manufactures_responsive.less';

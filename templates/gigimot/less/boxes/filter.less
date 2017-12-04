@@ -1,0 +1,236 @@
+// Фильтр товаров в категории по атрибутам и цене
+.box-filter {
+    padding: 22px 17px 31px;
+    .group-title {
+        background: url('@{images-dir}pull-down-options-group.gif') right center no-repeat;
+        color: #000;
+        cursor: pointer;
+        display: block;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 1;
+        margin-bottom: 12px;
+        margin-top: 25px;
+    }
+    .selector {
+        background: url('@{images-dir}price-slider.png') 0 -19px no-repeat,
+                    url('@{images-dir}price-slider.png') 100% -38px no-repeat,
+                    url('@{images-dir}price-slider.png') 0 -57px repeat-x;
+        height: 19px;
+        margin: 0 .6em 8px;
+        position: relative;
+        .ui-slider-range {
+            background: url('@{images-dir}price-slider.png') 0 -76px repeat-x;
+            height: 19px;
+        }
+        .ui-slider-handle {
+            background: url('@{images-dir}price-slider.png') 0 0 no-repeat;
+            cursor: pointer;
+            height: 19px;
+            position: absolute;
+            top: 0;
+            width: 12px;
+            z-index: 2;
+        }
+    }
+    .inputs {
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 16px;
+        .form-control,
+        .delimiter,
+        .currency {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .delimiter,
+        .currency {
+            font-size: 13px;
+            line-height: 30px;
+        }
+        .form-control {
+            text-align: center;
+            width: 58px;
+        }
+        .delimiter {
+            margin: 0 12px;
+        }
+        .currency {
+            margin-left: 7px;
+        }
+    }
+    .options {
+        padding-left: 3px;
+        .option {
+            display: block;
+            margin-top: 6px;
+            padding-left: 20px;
+            position: relative;
+            text-decoration: none;
+            .control-label {
+                cursor: pointer;
+                display: block;
+                font-size: 12px;
+                line-height: 14px;
+                min-height: 14px;
+            }
+            .checkbox-label {
+                background-color: #FFFFF;
+                background-position: 1px 1px;
+                background-repeat: no-repeat;
+                border: 1px solid #dcdcdc;
+                cursor: pointer;
+                display: block;
+                height: 12px;
+                left: 0;
+                margin-right: 6px;
+                position: absolute;
+                top: 0;
+                width: 12px;
+            }
+            .label {
+                color: #434343;
+            }
+            .count {
+                color: #959595;
+                &:before {
+                    content: '\0028';
+                }
+                &:after {
+                    content: '\0029';
+                }
+                &:empty {
+                    display: none;
+                }
+            }
+            &.checked {
+                .checkbox-label {
+                    background-color: #41a204;
+                    background-image: url('@{images-dir}checkbox-checked.svg');
+                    border-color: #41a204;
+                }
+                .label {
+                    color: #41a204;
+                }
+            }
+            &.disabled {
+                cursor: not-allowed;
+                .checkbox-label {
+                    background-color: #f5f5f5;
+                    border-color: #dcdcdc;
+                }
+                .label {
+                    color: #434343;
+                    text-decoration: line-through;
+                }
+            }
+        }
+        &.ps-container {
+            height: 300px;
+            position: relative;
+        }
+    }
+    .options-group{
+        &.collapsed {
+            .group-title {
+                background-image: url('@{images-dir}pull-up-options-group.gif');
+            }
+            .options {
+                display: none;
+            }
+        }
+        &:first-child {
+            .group-title {
+                margin-top: 0;
+            }
+        }
+    }
+}
+// Блок выбранных фильтров
+.box-selected-filters {
+    margin-bottom: 11px;
+    padding: 15px 20px 12px;
+    position: relative;
+    &:after {
+        .gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+        bottom: 0;
+        content: '.';
+        display: none;
+        font-size: 0;
+        height: 40px;
+        left: 0;
+        line-height: 0;
+        position: absolute;
+        right: 0;
+    }
+    &.collapsed {
+        max-height: 136px;
+        overflow: hidden;
+        &:after {
+            display: block;
+        }
+    }
+    .title {
+        color: #424242;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .clear-selected-filters {
+        color: #ee674d;
+        cursor: pointer;
+        display: block;
+        font-size: 12px;
+        margin: 10px 0 15px;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    dl {
+        margin: 0;
+    }
+    dt {
+        color: #636363;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    dd {
+        margin-left: 0;
+        margin-top: 3px;
+    }
+    ul {
+        font-size: 0;
+        line-height: 0;
+        list-style: 0;
+        margin: -5px 0 0 -9px;
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin: 5px 0 0 9px;
+        a {
+            background: #fff3b5;
+            color: #434343;
+            cursor: pointer;
+            display: block;
+            font-size: 12px;
+            line-height: 1;
+            padding: 5px 9px 6px 11px;
+            text-decoration: none;
+            &:after {
+                background: url('@{images-dir}remove-selected-filter-option.gif') left top no-repeat;
+                content: '.';
+                display: inline-block;
+                font-size: 0;
+                height: 5px;
+                line-height: 0;
+                margin-left: 10px;
+                vertical-align: middle;
+                width: 5px;
+            }
+        }
+    }
+}

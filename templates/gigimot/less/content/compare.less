@@ -1,0 +1,75 @@
+/**
+ * Стили для страницы сравнения тваров
+ */
+
+// Константы
+@import (less) '../variables.less';
+
+// Примеси
+@import (less) '../mixins.less';
+
+@charset: 'UTF-8';
+
+.compare-slide {
+    padding-bottom: 15px;
+    position: relative;
+}
+.compare-table {
+    .row {
+        font-size: 0;
+        line-height: 0;
+        white-space: nowrap;
+    }
+    .row:nth-child(even) {
+            background: #f8f8f8;
+    }
+    .row:nth-child(odd) {
+            background: #ffffff;
+    }
+    
+    .cell {
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 2px;
+        vertical-align: top;
+        width: 250px;
+        white-space: normal;
+        &.heading-cell {
+            font-weight: 600;
+            width: 150px;
+        }
+        &.image-cell {
+            font-size: 0;
+            line-height: 0;
+            a {
+                border: 1px solid #e3e3e3;
+                display: inline-block;
+                height: 180px;
+                overflow: hidden;
+                width: 180px;
+            }
+            img {
+                display: inline-block;
+                height: auto;
+                max-height: 100%;
+                max-width: 100%;
+                width: auto;
+            }
+        }
+        &.price-cell {
+            color: #41a204;
+            font-size: 1.66666667rem;
+            font-weight: normal;
+            line-height: 1;
+        }
+        &.price-cell,
+        &.buttons-cell {
+            padding-top: 5px;
+            padding-bottom: 4px;
+        }
+    }
+    .button {
+        min-width: 90px;
+    }
+}

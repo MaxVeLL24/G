@@ -1,0 +1,45 @@
+.channel {
+	display: block;
+}
+h1.channel {
+
+}
+
+.channel_description {
+	display: block;
+	padding: 5px;
+	font-style: italic;
+}
+
+.channel_copyright {
+	display: none;
+}
+
+.item {
+	display: block;
+	padding: 5px;
+	margin-top: 10px;
+	border: 1px solid #CCC;
+	background: #EEE;
+}
+
+h2.item {
+	border: 0px none;
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+a.item {
+	border: 0px none;
+	font-weight: bold;
+}
+
+img.item {
+	border: 0px none;
+}
+
+.item_description {
+	border: 0px none;
+	margin-right: 5px;
+	color: #666;
+}

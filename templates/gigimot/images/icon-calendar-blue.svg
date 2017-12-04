@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16px" height="15px" viewBox="0 0 16 15" enable-background="new 0 0 16 15">
+	<rect x="3" y="12" fill="#4c92bf" width="1" height="1"/>
+	<rect x="3" y="9" fill="#4c92bf" width="1" height="1"/>
+	<rect x="6" y="9" fill="#4c92bf" width="1" height="1"/>
+	<rect x="6" y="12" fill="#4c92bf" width="1" height="1"/>
+	<rect x="9" y="12" fill="#4c92bf" width="1" height="1"/>
+	<rect x="9" y="9" fill="#4c92bf" width="1" height="1"/>
+	<rect x="12" y="9" fill="#4c92bf" width="1" height="1"/>
+	<rect x="12" y="12" fill="#4c92bf" width="1" height="1"/>
+	<rect x="6" y="6" fill="#4c92bf" width="1" height="1"/>
+	<rect x="9" y="6" fill="#4c92bf" width="1" height="1"/>
+	<rect x="12" y="6" fill="#4c92bf" width="1" height="1"/>
+	<path fill="#4c92bf" d="M14,1v2h-4V1H6v2H2V1H0v14h16V1H14z M15,14H1V5h14V14z"/>
+	<rect x="3" fill="#4c92bf" width="2" height="2"/>
+	<rect x="11" fill="#4c92bf" width="2" height="2"/>
+</svg>

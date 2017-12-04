@@ -1,0 +1,77 @@
+// Подвал сайта
+.page-footer {
+    border-bottom: 1px solid #d3d3d3;
+    margin-top: 20px;
+    // Первый уровень
+    .level-1 {
+        background: #e3e3e3;
+        border-bottom: 1px solid #d3d3d3;
+        font-size: 0;
+        line-height: 0;
+        padding-bottom: 35px;
+        padding-top: 25px;
+        .column {
+            .column-title {
+                color: #424242;
+                font-size: 15/12rem;
+                font-weight: 500;
+                line-height: @default-lineheight;
+                margin-bottom: 16px;
+                text-transform: uppercase;
+            }
+        }
+        .column-about-us,
+        .column-categories,
+        .column-subscribe {
+            display: inline-block;
+            font-size: 1rem;
+            line-height: @default-lineheight;
+            vertical-align: top;
+        }
+        .column-about-us,
+        .column-categories {
+            float: left;
+            width: 20%;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                background: url('@{images-dir}footer-column-link-item.svg') left center no-repeat;
+                color: #828282;
+                font-size: 13px;
+                margin-top: 2px;
+                padding-left: 10px;
+                a {
+                    color: inherit;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .column-subscribe {
+            float: right;
+            width: 40%;
+            .description {
+                margin-bottom: 18px;
+                margin-top: 6px;
+            }
+
+        }
+    }
+    // Второй уровень
+    .level-2 {
+        padding-bottom: 18px;
+        padding-top: 18px;
+        .column-copyright {
+            float: left;
+        }
+        .column-developer {
+            float: right;
+            text-align: right;
+        }
+    }
+}

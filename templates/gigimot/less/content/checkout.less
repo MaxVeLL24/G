@@ -1,0 +1,108 @@
+// Страница оформления закза
+.checkout {
+    padding-right: 50%;
+    // Левая колонка для авторизации и данных о покупателе
+    .checkout-left {
+        float: left;
+                
+        .common-styled-block {
+            padding: 15px;
+        }
+    }
+    // Правая колонка со списком покупок и общей стоимостью
+    .checkout-right {
+        float: right;
+        margin-right: -100%;
+        width: 98%;
+        /* .column-padding {
+            padding-left: 20px;
+        } */
+        .common-styled-block {
+            padding: 15px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+    }
+    // Итоговая стоимость
+    .order-totals {
+        font-size: 1.2em;
+        line-height: 1.4em;
+        margin-top: 20px;
+    }
+}
+
+// Корзина на странице оформления заказа
+.checkout-cart {
+    .cart-item {
+        margin-top: 15px;
+        padding-left: 110px;
+    }
+    .item-image {
+        display: block;
+        float: left;
+        line-height: 100px;
+        margin-left: -110px;
+        overflow: hidden;
+        text-align: center;
+        text-decoration: none;
+        width: 100px;
+        img {
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+    }
+    .everything-else {
+        float: left;
+        width: 100%;
+    }
+    .item-name {
+        font-size: 14/12rem;
+        line-height: @default-lineheight;
+    }
+    .item-attributes {
+        font-size: 11/12rem;
+        line-height: @default-lineheight;
+        list-style: none;
+        margin-top: 10px;
+        padding-left: 20px;
+        li:before {
+            content: '\2014\00a0';
+        }
+    }
+    .item-total {
+        list-style: none;
+        padding-left: 0;
+    }
+}
+
+// Методы оплаты и доставки
+.shipping-and-payment-methods {
+    .method-item {
+        margin-bottom: 1em;
+        margin-top: 1em;
+        padding-left: 25px;
+    }
+    .custom-radiobox {
+        float: left;
+        margin-left: -25px;
+    }
+    .module-title {
+        font-weight: bold;
+    }
+    .method-title {
+        color: #B8CBD5;
+        font-size: 11/12rem;
+        line-height: @default-lineheight;
+        margin-top: 4px;
+    }
+    .method-cost {
+        margin-top: 4px;
+    }
+}
+
+// Поле для ввода комментария к заказу
+#checkout-form-comments-textarea {
+    height: 200px;
+}

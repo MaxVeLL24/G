@@ -1,0 +1,16 @@
+/.idea
+/nbproject
+/deploy
+/node_modules
+/templates/easy2_old
+Thumbs.db
+Thumbs.db:encryptable
+/.htaccess
+/test.php
+*.xml
+/includes/vendor/
+/composer.lock
+/composer.phar
+/google6059274d44af7b54.html
+/yarn.lock
+/yarn-error.log

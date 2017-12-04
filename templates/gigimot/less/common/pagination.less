@@ -1,0 +1,47 @@
+// Постраничная навигация
+.pagination {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        padding: 0 3px 0 4px;
+        vertical-align: middle;
+    }
+    .link {
+        background-color: #ededed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: #7d7d7d;
+        cursor: pointer;
+        display: block;
+        font-size: 13px;
+        line-height: 30px;
+        min-width: 30px;
+        min-height: 30px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: middle;
+        &.link-prev {
+            background-image: url('@{images-dir}pagination-button-prev.gif');
+            font-size: 0;
+        }
+        &.link-next {
+            background-image: url('@{images-dir}pagination-button-next.gif');
+        }
+        &.link-prev,
+        &.link-next {
+            font-size: 0;
+            line-height: 0;
+        }
+        &.link-active {
+            .gradient(#4fab15, #42980b);
+            box-shadow: -2px  2px 2px 0 rgba(0, 0, 0, .1),
+                        -1px  1px 1px 0 rgba(0, 0, 0, .1),
+                         1px -1px 1px 0 rgba(0, 0, 0, .1),
+                        -1px -1px 1px 0 rgba(0, 0, 0, .1);
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+// Центральная часть для боковых колонок и контента
+.page-content {
+    margin-top: 20px;
+    // Левая боковая колонка
+    &.with-left-column {
+        padding-left: 240px;
+    }
+    .column-left {
+        float: left;
+        margin-left: -240px;
+        width: 224px;
+    }
+    // Правая боковая колонка
+    &.with-right-column {
+        padding-right: 240px;
+    }
+    .column-right {
+        float: right;
+        margin-right: -240px;
+        width: 224px;
+    }
+    // Центральная колонка под контент
+    &.with-left-column,
+    &.with-right-column {
+        .column-center {
+            float: left;
+            width: 100%;
+        }
+    }
+    .main-page-default-specials{
+        position: relative;
+        padding: 20px;
+        margin: 20px auto;
+        height: 300px;
+        overflow-y: auto;
+        background: #fff;
+        line-height: 1.2;
+        &::-webkit-scrollbar{
+            width: 5px;
+            background: #fff;
+        }
+        &::-webkit-scrollbar-thumb{
+            background: linear-gradient(to bottom,#4fab15 0,#42980b 100%);
+            &:hover{
+                background: linear-gradient(to bottom, #3b8010 0, #317008 100%);
+            }
+        }
+    }
+}
+// Хлебные крошки
+.breadcrumbs {
+    /* &, a {
+        color: #646e80;
+    }
+    i {
+        font-style: normal;
+    }
+    i:first-child {
+        background: url('@{images-dir}home.png') left center no-repeat;
+        padding-left: 20px;
+    } */
+    display: block;
+    line-height: 13px;
+    list-style: none;
+    margin: 26px 0 0;
+    padding: 0;
+    font-size: 0;
+    li {
+        background: url('@{images-dir}breadcrumb-arrow.gif') left center no-repeat;
+        color: #424242;
+        display: inline-block;
+        font-size: 13px;
+        padding-left: 9px;
+        padding-right: 6px;
+        a {
+            color: #939393;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        &:first-child {
+            background-image: url('@{images-dir}home.png');
+            padding-left: 20px;
+        }
+        &:last-child a {
+            color: #424242;
+            text-decoration: none;
+        }
+    }
+}
+nav div.main-width div.first-level-items div.first-level-item-wrapper:nth-child(1) a.first-level-item{
+    background: none;
+}
+nav div.main-width div.first-level-items div.first-level-item-wrapper:nth-child(1) a.first-level-item:hover{
+    background: #ffba00;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#ffba00),color-stop(100%,#ffea00));
+    background: -webkit-linear-gradient(top,#ffba00 0,#ffea00 100%);
+    background: linear-gradient(to bottom,#ffba00 0,#ffea00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffba00', endColorstr='#ffea00', GradientType=0);
+}
+nav div.main-width div.first-level-items div.first-level-item-wrapper:nth-child(1) a.first-level-item.active{
+    background: #ffba00;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#ffba00),color-stop(100%,#ffea00));
+    background: -webkit-linear-gradient(top,#ffba00 0,#ffea00 100%);
+    background: linear-gradient(to bottom,#ffba00 0,#ffea00 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffba00', endColorstr='#ffea00', GradientType=0);
+}

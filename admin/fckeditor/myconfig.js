@@ -1,0 +1,1 @@
+FCKConfig.ToolbarStartExpanded	= false ;

@@ -1,0 +1,176 @@
+// Центральная часть для боковых колонок и контента
+@media all and (max-width: 600px) {
+    .page-content {
+        // Левая боковая колонка
+        &.with-left-column {
+            padding-left: 0;
+        }
+        .column-left {
+            margin-left: 0;
+            .column-wrapper {
+                box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, .1);
+                margin-left: -210px;
+                transition: margin-left .5s ease-in-out;
+            }
+            &.visible {
+                .column-wrapper {
+                    margin-left: 0;
+                    transition: margin-left .5s ease-in-out;
+                }
+            }
+        }
+        // Правая боковая колонка
+        &.with-right-column {
+            padding-right: 0;
+        }
+        .column-right {
+            margin-right: 0;
+            .column-wrapper {
+                box-shadow: -20px 20px 20px 0 rgba(0, 0, 0, .1);
+                margin-right: -210px;
+                transition: margin-right .5s ease-in-out;
+            }
+            &.visible {
+                .column-wrapper {
+                    margin-right: 0;
+                    transition: margin-right .5s ease-in-out;
+                }
+            }
+        }
+        // Общие правила для левой и правой боковых колонок
+        .side-column {
+            background-color: rgba(0, 0, 0, .2);
+            bottom: 0;
+            // float: none;
+            left: 0;
+            opacity: 0;
+            overflow: auto;
+            position: fixed;
+            right: 0;
+            top: 0;
+            transition: opacity .5s ease-in-out, visibility 0s step-end .5s;
+            visibility: hidden;
+            width: auto;
+            z-index: 150;
+            &.visible {
+                opacity: 1;
+                transition: opacity .5s ease-in-out, visibility 0s step-start;
+                visibility: visible;
+            }
+            .column-wrapper {
+                background: #fff;
+                padding: 10px;
+                max-width: 190px;
+                position: relative;
+                .close-column {
+                    background: url('@{images-dir}close-cart-popup.svg') 0 0 no-repeat;
+                    background-size:12px;
+                    height: 12px;
+                    position: absolute;
+                    right: 19px;
+                    top: 20px;
+                    width: 12px;
+                    &:hover {
+                        background-position: 0 -12px;
+                    }
+                    &:active {
+                        background-position: 0 -24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 640px) {
+    .page-content {
+        .column-center {
+            article {
+                &.article {
+                    p {
+                        iframe {
+                            display: block;
+                            margin: 0 auto;
+                            width: 100% !important;
+                            height: auto !important;
+                            min-height: 315px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+div.main-width {
+    div.first-level-items {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        @media all and (max-width: 920px) {
+            display: none;
+            &.visible {
+                display: block;
+            }
+        }
+        div.first-level-item-wrapper {
+            a.first-level-item {
+                line-height: 15px;
+                padding: 10px;
+                min-height: 30px;
+                font-size: 16px;
+                text-transform: none;
+                @media all and (max-width: 1061px) {
+                    padding-right: 5px;
+                    padding-left: 5px;
+                    font-size: 14px;
+                }
+                @media all and (max-width: 1061px) {
+                    font-size: 13px;
+                }
+                @media all and (max-width: 920px) {
+                    line-height: 24px;
+                    padding: 10px;
+                    min-height: 30px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        // Для вирывнювання по середені пунктів головної навігації, які в одну строчку по номеру nth:child
+        div.first-level-item-wrapper {
+            &:nth-child(3), &:nth-child(9) {
+                a.first-level-item {
+                    padding-top: 17px;
+                    padding-bottom: 3px;
+                    @media all and (max-width: 920px) {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+    }
+    div.first-level-items div.first-level-item-wrapper div.first-level-children-wrapper {
+        text-align: left;
+        div.main-width {
+            @media all and (max-width: 414px) {
+                margin: 0;
+                background: radial-gradient(ellipse at center, #282829 2%, #484748 100%);
+            }
+            div.second-level-item-wrapper {
+                div.second-level-right-part {
+                    a.second-level-item {
+                        @media all and (max-width: 414px) {
+                            color: white;
+                            padding: 5px 0;
+                        }
+                    }
+                }
+                div.top-category-image {
+                    @media all and (max-width: 414px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
